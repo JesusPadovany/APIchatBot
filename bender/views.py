@@ -4,6 +4,7 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from bender.models import Question, Answer
 from bender.serializers import QuestionSerializer,AnswerSerializer
+import random
 
 class JSONResponse(HttpResponse):
     """
@@ -104,13 +105,11 @@ def answer_detail(request, pk):
         return HttpResponse(status=204)
 
 @csrf_exempt
-def prueba(request, pk):
-    """
-    List all code question, or create a new question.
-    """
+def prueba(request, str):
     if request.method == 'GET':
-        questions = Question.objects.all()
-        serializer = QuestionSerializer(questions, many=True)
+        questions = Question.objects.filter(question_text__contains=str).values('id')
+        answer = random.choice(Answer.objects.filter(question__id__in=questions))
+        serializer = AnswerSerializer(answer)
         return JSONResponse(serializer.data)
 
     elif request.method == 'POST':
