@@ -105,7 +105,7 @@ def answer_detail(request, pk):
         return HttpResponse(status=204)
 
 @csrf_exempt
-def prueba(request, str):
+def bot(request, str):
     if request.method == 'GET':
         questions = Question.objects.filter(question_text__contains=str).values('id')
         answer = random.choice(Answer.objects.filter(question__id__in=questions))
