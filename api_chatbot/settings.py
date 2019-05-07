@@ -37,11 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders', #Para agregar CORS a los headers response
     'rest_framework',
     'bender',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',#esta es para el CORS
+    'django.middleware.common.BrokenLinkEmailsMiddleware',
+    #'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -49,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'api_chatbot.urls'
@@ -82,6 +87,40 @@ DATABASES = {
     }
 }
 
+# Estas configuraciones son de CORS
+
+# permitir que cualquier host haga request a la API
+CORS_ORIGIN_ALLOW_ALL = True
+
+# Permitir una lista de host para que hagan request a la API
+#CORS_ORIGIN_WHITELIST = (
+#    '127.0.0.1:8080' # La SHOP 
+#)
+
+#Métodos que se permiten hacer a la API
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
+
+CORS_ALLOW_CREDENTIALS = True
+
+# Headers permitidos
+CORS_ALLOW_HEADERS = (
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
