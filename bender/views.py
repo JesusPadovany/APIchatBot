@@ -5,6 +5,12 @@ from rest_framework.parsers import JSONParser
 from bender.models import Question, Answer
 from bender.serializers import QuestionSerializer,AnswerSerializer
 import random
+from django.shortcuts import render
+from django.urls import reverse
+from django.views.generic import DetailView, ListView, RedirectView, UpdateView, TemplateView
+
+class Indice(TemplateView):
+    template_name = 'index.html'
 
 class JSONResponse(HttpResponse):
     """
