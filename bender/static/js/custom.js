@@ -26,7 +26,8 @@ function press(){
 
 function consumo(texto){
   var request = new XMLHttpRequest();
-  var url = 'http://127.0.0.1:3333/bot/'+texto;
+  //var url = '/api/'+texto; //Esta es para cuando se debe ejecutar en teléfonos o tablets
+  var url = 'http://127.0.0.1:8000/api/'+texto; //Esta es para ejecutar en la pc de servidor
 
   request.open('GET', url, true);
   request.setRequestHeader("Content-Type", "application/json");
