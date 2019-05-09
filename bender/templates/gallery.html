@@ -78,6 +78,19 @@
       </div>
       <div class="row">
         <!-- INICIO DE LA FILA-->
+        {% for product in products %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div class="product-item">
+              <a href="./static/img/slider_1.jpg" class="image-popup">
+                <img src="./static/img/slider_1.jpg" class="img-responsive img-rounded" alt="Free Bootstrap Template by uicookies.com">
+              </a>
+            <div class="text">
+              <h2 class="heading">{{ product.id }}</h2>
+              <p>{{ product.name }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <div class="product-item">
               <a href="./static/img/slider_1.jpg" class="image-popup">
@@ -248,72 +261,7 @@
   </section>
 
  <!-- FOOTER-->
- <footer class="probootstrap-footer probootstrap-bg" style="background-image: url(./static/img/slider_4.jpg)">
-  <div class="container">
-
-    <!-- Info sobre los proveedores de productos-->
-    <div class="row mb60">
-      <div class="col-md-3">
-        <div class="probootstrap-footer-widget">
-          <h4 class="heading">Nuestros Proveedores</h4>
-          <p>Los productos con los que elaboramos nuestras medicinas son manipulados por los profesionales en el área</p>
-        </div> 
-      </div>
-
-      <!-- Links de interés -->
-      <div class="col-md-3">
-        <div class="probootstrap-footer-widget">
-          <h4 class="heading">Links de Interés</h4>
-          <ul class="stack-link">
-            <li><a href="https://www.quo.es/salud/g31732/medicina-natural-funciona/">¿Funciona la Medicina Natural?</a></li>
-            <li><a href="https://ecoosfera.com/2012/11/medicina-natural-plantas-y-frutos-que-deberias-tener-en-tu-botiquin-alternativo/">Siempre tener en casa</a></li>
-            <li><a href="https://mindfit.club/medicina-natural/">Medicina natural</a></li>
-            <li><a href="https://es.aleteia.org/2017/05/05/la-medicina-naturista-es-efectiva/">¿Es efectiva la medicina natural?</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!--Nuestros productos--> <!-- FALTA POR COMPLETAR-->
-      <div class="col-md-3">
-        <div class="probootstrap-footer-widget">
-          <h4 class="heading">Servicios</h4>
-          <ul class="stack-link">
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Íconos de Redes sociales-->
-      <div class="col-md-3">
-        <div class="probootstrap-footer-widget">
-          <h4 class="heading">Redes sociales</h4>
-          <ul class="probootstrap-footer-social">
-            <li><a href="#"><i class="icon-twitter"></i></a></li>
-            <li><a href="#"><i class="icon-facebook"></i></a></li>
-            <li><a href="#"><i class="icon-instagram2"></i></a></li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="row copyright">
-      <!--Propiedad, derechos de autor-->
-      <div class="col-md-6">
-        <div class="probootstrap-footer-widget">
-          <p>Diseño de <a href="https://uicookies.com/">uiCookies:Green</a> &copy; 2017. <br>
-            Propiedad de Jesús Ruíz y Génova Castillo
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <!--FIN FOOTER-->
-</footer>
+ {% include "footer.html" %}
 
 <!-- SCRIPTS-->
 <script src="./static/js/scripts.js"></script>
