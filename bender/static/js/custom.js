@@ -27,7 +27,7 @@ function press(){
 function consumo(texto){
   var request = new XMLHttpRequest();
       
-  request.open('GET', 'http://127.0.0.1:3333/bot/'+texto, true);
+  request.open('GET', '/bot/'+texto, true);
   request.setRequestHeader("Content-Type", "application/json");
 
   request.onreadystatechange = function() {
