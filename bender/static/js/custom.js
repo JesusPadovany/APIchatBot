@@ -45,7 +45,7 @@ function requestToChatbot(texto){
         alert("La clave es " + id+ " y el valor es " + response[id]);
       }
       */
-      respuestaBot(objetoResponse.answer_text);       
+      responseBot(objetoResponse.answer_text);       
     }
 };
   
@@ -53,7 +53,7 @@ function requestToChatbot(texto){
 }
 
 
-function respuestaBot(msg){
+function responseBot(msg){
 
   var li_ini = "<li class=\"left clearfix\">";
   var span_ini = "<span class=\"chat-img pull-left\">";
