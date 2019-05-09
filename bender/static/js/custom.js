@@ -17,14 +17,14 @@ function press(){
           strong + "</div>" +"<p>" + message.val() +"</p>" + "</div> </li> <br>"
 
           $("#chat").append(mensaje);
-          consumo(message.val());
+          requestToChatbot(message.val());
           message.val('');
       }
   });
 }
 
 
-function consumo(texto){
+function requestToChatbot(texto){
   var request = new XMLHttpRequest();
   //var url = '/api/'+texto; //Esta es para cuando se debe ejecutar en teléfonos o tablets
   var url = 'http://127.0.0.1:8000/api/'+texto; //Esta es para ejecutar en la pc de servidor
