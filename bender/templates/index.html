@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Open+Sans:300,400" rel="stylesheet">
     <link rel="stylesheet" href="./static/css/styles-merged.css">
     <link rel="stylesheet" href="./static/css/style.css">
-    <!--<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>-->
   </head>
 
   <body>
@@ -16,7 +15,7 @@
   <!-- Imagen de cargando -->
   <div class="probootstrap-loader"></div>
 
-  <!-- START: header -->
+  <!-------------------------------------------------------------------- ENCABEZADO ------------------------------------->
   <header role="banner" class="probootstrap-header">
     <div class="container">
       <!-- Título arriba a la izquierda-->
@@ -31,17 +30,17 @@
         <!-- Menú superior que lleva a las otras páginas-->
         <nav role="navigation" class="probootstrap-nav hidden-xs">
           <ul class="probootstrap-main-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">Sobre nosotros</a></li>
-            <li><a href="gallery.html">Galería</a></li>
-            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="#about">Sobre nosotros</a></li>
+            <li><a href="#products">Galería</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul> 
         </nav>
     </div>
   <!-- END: header -->
   </header>
 
-  <!-- Sección del Título principal con un slider de imágenes -->
+  <!--------------------------------- Sección del Título principal con un slider de imágenes ------------------------------->
   <section class="probootstrap-slider flexslider">
     <div class="probootstrap-text-intro">
       <div class="container">
@@ -74,7 +73,7 @@
   </section>
 
 
-<!--Cuerpo de la página--> 
+<!--------------------------------------------------Beneficios y conceptos iniciales---------------------------------------------------------> 
   <section class="probootstrap-section">
     <div class="container">
       <div class="row">
@@ -128,7 +127,70 @@
     </div> <!-- Fin contenedor-->
   </section>   <!-- Fin cuerpo principal -->
 
-  <!-- Separador del medio-->
+  <!------------------------------------ SECCIÓN DE INFORMACIÓN DE LA PÁGINA, CON HISTORIA Y TODO ----------------------------------->
+  <section class="probootstrap-section" id="about">
+    <div class="container">
+      <div class="probootstrap-section-heading text-center mb50">
+        <h4 class="sub-heading">About</h4>
+        <h2 class="heading">La historia de nuestra compañía</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <figure>
+            <img src="./static/img/img_5.jpg" alt="Free HTML5 Bootstrap Template by uicookies.com" class="img-responsive img-rounded">
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae enim labore doloribus aut sunt praesentium vitae tempora asperiores. At quia ad corrupti in blanditiis iste velit, rem impedit quae, dolor doloremque. Nesciunt, nihil minima! Architecto excepturi dicta cum amet obcaecati?</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id iste voluptate quam nostrum omnis.</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate magnam rem, incidunt exercitationem atque error repudiandae tenetur omnis fuga ex voluptate pariatur aliquam ea ab ipsa sed non natus eius?</p>
+        </div>
+        <div class="col-md-6">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam libero alias magni facere cumque inventore corrupti ad porro fuga eius!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque excepturi, qui illum culpa expedita non nobis dicta voluptates quod praesentium fugit quisquam inventore accusantium? Blanditiis.</p>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!------------------------------------------ SECCIÓN DE LOS INTEGRANTES DEL EQUIPO----------------------------------------------->
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="probootstrap-section-heading text-center mb50">
+        <h4 class="sub-heading">Equipo</h4>
+        <h2 class="heading">Fundadores y líderes del personal</h2>
+      </div>
+      <div class="row">
+
+        <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+          <div class="media-item">
+            <figure><img src="./static/img/person_1.jpg" alt="Génova Castillo" class="img-responsive"></figure>
+            <div class="text">
+              <h4 class="sub-heading">Génova Castillo</h4>
+              <h2 class="heading">Fundadora</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+          <div class="media-item">
+            <figure><img src="./static/img/person_2.jpg" alt="Jesús Ruíz" class="img-responsive"></figure>
+            <div class="text">
+              <h4 class="sub-heading">Jesus Ruíz</h4>
+              <h2 class="heading">Fundador</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    <!--FIN DE LOS INTEGRANTES DEL EQUIPO-->
+    </div>
+  </section>
+
+
+  <!------------------------------------------------- Separador del medio------------------------------------------------------------>
   <section class="probootstrap-section probootstrap-bg" style="background-image: url(./static/img/separator.jpg);">
     <div class="container text-center">
       <h2 class="heading">Tu cuerpo es tu templo.</h2>
@@ -140,7 +202,7 @@
     </div>
   </section>
 
-  <!-- Sección bajo el separador del medio-->
+  <!---------------------------------------- Sección de conceptos generales ------------------------------------------>
   <section class="probootstrap-section">
     <div class="container">
       <!--Primera fila-->
@@ -164,7 +226,7 @@
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <div class="service">
             <div class="icon"><i class="icon-tree"></i></div>
-            <h2 class="heading">Natural siempre es mejor</h2>
+            <h2 class="heading">Naturales mejor</h2>
             <p>Aprovecha los productos y recursos que nos brinda la naturaleza, más para la prevención que para el tratamiento.</p>
           </div>
         </div>
@@ -201,7 +263,7 @@
     </div> <!-- Fin de contenedor -->
   </section>
 
-<!-- CHAT -->
+<!-------------------------------------------------- CHAT ----------------------------------------------------->
   <div class="container" id="chatdiv">
     <!--Primera fila-->
     <div class="row">
@@ -255,11 +317,121 @@
     </div>
   </div>
   <!--  FIN CHAT-->
+
+  <!-------------------------------------IMÁGENES DE NUESTROS PRODUCTOS--------------------------------------S-->
+  <section class="probootstrap-section" id="products">
+    <div class="container">
+      <div class="probootstrap-section-heading text-center mb50">
+        <h4 class="sub-heading">Imágenes de nuestros productos</h4>
+        <h2 class="heading">Mira y explora!</h2>
+      </div>
+      <div class="row">
+        <!-- INICIO DE LA FILA-->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div class="product-item">
+              <a href="./static/img/slider_1.jpg" class="image-popup">
+                <img src="./static/img/slider_1.jpg" class="img-responsive img-rounded" alt="Free Bootstrap Template by uicookies.com">
+              </a>
+            <div class="text">
+              <h2 class="heading">Prevenir antes que curar</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div class="product-item">
+              <a href="./static/img/slider_2.jpg" class="image-popup">
+                <img src="./static/img/slider_2.jpg" class="img-responsive img-rounded" alt="Free Bootstrap Template by uicookies.com">
+              </a>
+            <div class="text">
+              <h2 class="heading">Prevenir antes que curar</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div class="product-item">
+              <a href="./static/img/slider_3.jpg" class="image-popup">
+                <img src="./static/img/slider_3.jpg" class="img-responsive img-rounded" alt="Free Bootstrap Template by uicookies.com">
+              </a>
+            <div class="text">
+              <h2 class="heading">Prevenir antes que curar</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <div class="product-item">
+              <a href="./static/img/slider_3.jpg" class="image-popup">
+                <img src="./static/img/slider_3.jpg" class="img-responsive img-rounded" alt="Free Bootstrap Template by uicookies.com">
+              </a>
+            <div class="text">
+              <h2 class="heading">Prevenir antes que curar</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="product-item">
+                <a href="./static/img/slider_1.jpg" class="image-popup">
+                  <img src="./static/img/slider_1.jpg" class="img-responsive img-rounded" alt="Free Bootstrap Template by uicookies.com">
+                </a>
+              <div class="text">
+                <h2 class="heading">Prevenir antes que curar</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="product-item">
+                <a href="./static/img/slider_2.jpg" class="image-popup">
+                  <img src="./static/img/slider_2.jpg" class="img-responsive img-rounded" alt="Free Bootstrap Template by uicookies.com">
+                </a>
+              <div class="text">
+                <h2 class="heading">Prevenir antes que curar</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="product-item">
+                <a href="./static/img/slider_3.jpg" class="image-popup">
+                  <img src="./static/img/slider_3.jpg" class="img-responsive img-rounded" alt="Free Bootstrap Template by uicookies.com">
+                </a>
+              <div class="text">
+                <h2 class="heading">Prevenir antes que curar</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="product-item">
+                <a href="./static/img/slider_4.jpg" class="image-popup">
+                  <img src="./static/img/slider_4.jpg" class="img-responsive img-rounded" alt="Free Bootstrap Template by uicookies.com">
+                </a>
+              <div class="text">
+                <h2 class="heading">Prevenir antes que curar</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
+              </div>
+            </div>
+          </div>
+
+        
+  <!-- FIN DE LA SECCIÓN DE LA GALERÍA-->
+      </div>
+    </div>
+  </section>  
+
   <!-- End Body-->
   </body>
-
-
-  <!-- FOOTER-->
+  <!------------------------------------------------------------------ FOOTER--------------------------------------------------------------->
   <footer class="probootstrap-footer probootstrap-bg" style="background-image: url(./static/img/footer_index.jpg)">
     <div class="container">
 
@@ -299,7 +471,7 @@
         </div>
 
         <!-- Íconos de Redes sociales-->
-        <div class="col-md-3">
+        <div class="col-md-3" id="contact">
           <div class="probootstrap-footer-widget">
             <h4 class="heading">Redes sociales</h4>
             <ul class="probootstrap-footer-social">
