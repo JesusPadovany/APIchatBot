@@ -3,16 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>L&L Drugs | Home</title>
+    <title>L&L Medicines | Home</title>
  
     <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Open+Sans:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/styles-merged.css">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/css/chat.css">
-    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-    <!-- <link rel='stylesheet' type='text/css' href='/resources/tutorial/css/example.css'> -->
-   <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <link rel="stylesheet" href="./static/css/styles-merged.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <!--<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>-->
   </head>
 
   <body>
@@ -24,7 +20,7 @@
   <header role="banner" class="probootstrap-header">
     <div class="container">
       <!-- Título arriba a la izquierda-->
-        <a href="index.html" class="probootstrap-logo">L&L Drugs.</a>
+        <a href="index.html" class="probootstrap-logo">L&L Company.</a>
         
         <!-- Este menu se muestra cuando la pantalla es muy pequeña-->
         <a href="#" class="probootstrap-burger-menu visible-xs" >
@@ -32,10 +28,9 @@
         </a>
         <div class="mobile-menu-overlay"></div>
 
-        <!-- Menú superior que debería llevar a otras páginas-->
+        <!-- Menú superior que lleva a las otras páginas-->
         <nav role="navigation" class="probootstrap-nav hidden-xs">
           <ul class="probootstrap-main-nav">
-            <!-- TO-DO: en vez de hacer más plantillas HTML hacer otras secciones con esta informacion-->
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="about.html">Sobre nosotros</a></li>
             <li><a href="gallery.html">Galería</a></li>
@@ -46,7 +41,7 @@
   <!-- END: header -->
   </header>
 
-  <!-- Sección del Título principal -->
+  <!-- Sección del Título principal con un slider de imágenes -->
   <section class="probootstrap-slider flexslider">
     <div class="probootstrap-text-intro">
       <div class="container">
@@ -59,15 +54,9 @@
               <div class="probootstrap-animate probootstrap-sub-wrap mb30" data-animate-effect="fadeIn">
                 Ofreciendo una alternativa con naturopatía. <br>
               </div>
-              <!-- 
-              <div class="probootstrap-animate probootstrap-sub-wrap mb30" data-animate-effect="fadeIn">A new website template by 
-                <a href="https://uicookies.com/">uicookies.com</a> under license 
-                <a href="https://uicookies.com/license/">Creative Commons 3.0</a>
-              </div>   -->
-
               <!-- Botón que debería invocar al chat-->
               <p class="probootstrap-animate" data-animate-effect="fadeIn">
-                <a href="#" class="btn btn-ghost btn-ghost-white">Pregúntanos lo que quieras!</a>
+                <a href="#chatdiv" class="btn btn-ghost btn-ghost-white">Pregúntanos lo que quieras!</a>
               </p> <!-- Fin botón-->
             </div>
           </div>
@@ -75,11 +64,11 @@
       </div> <!-- Fin contenedor-->
     </div>
 
-    <!-- Fondos del título principal-->
+    <!-- Fondos del slider del título principal-->
      <ul class="slides">
-      <li style="background-image: url(../static/img/slider_1.jpg);"></li>
-      <li style="background-image: url(../static/img/slider_2.jpg);"></li>
-      <li style="background-image: url(../static/img/slider_4.jpg);"></li>
+      <li style="background-image: url(./static/img/slider_1.jpg);"></li>
+      <li style="background-image: url(./static/img/slider_2.jpg);"></li>
+      <li style="background-image: url(./static/img/slider_4.jpg);"></li>
     </ul> 
   <!-- Fin de Sección del Título principal -->
   </section>
@@ -89,10 +78,11 @@
   <section class="probootstrap-section">
     <div class="container">
       <div class="row">
-
-        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 probootstrap-animate" data-animate-effect="fadeIn">
+        <!--probootstrap-animate es una clase para que se carguen animadamente mientras vas viendo la pagina-->
+        <!--data-animate-effect="fadeIn" es tambien un efecto-->
+        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
           <div class="product-item">
-            <figure><img src="../static/img/img_1.jpg" alt="Free Template by uicookies.com" class="img-responsive"></figure>
+            <figure><img src="./static/img/img_1.jpg" alt="Prevenir antes que curar" class="img-responsive"></figure>
             <div class="text">
               <h2 class="heading">Prevenir antes que curar</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
@@ -100,9 +90,9 @@
           </div>
         </div>
 
-        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 probootstrap-animate" data-animate-effect="fadeIn">
+        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 " >
           <div class="product-item">
-            <figure><img src="../static/img/img_3.jpg" alt="Free Template by uicookies.com" class="img-responsive"></figure>
+            <figure><img src="./static/img/img_3.jpg" alt="Imagen Origen organico" class="img-responsive"></figure>
             <div class="text">
               <h2 class="heading">Origen Orgánico</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
@@ -114,9 +104,9 @@
       <!--Segunda fila-->
       <div class="row">
 
-        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 probootstrap-animate" data-animate-effect="fadeIn">
+        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
           <div class="product-item">
-            <figure><img src="../static/img/img_4.jpg" alt="Free Template by uicookies.com" class="img-responsive"></figure>
+            <figure><img src="./static/img/img_4.jpg" alt="Atenúa la iatrogenia" class="img-responsive"></figure>
             <div class="text">
               <h2 class="heading">Atenúa la iatrogenia</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
@@ -124,9 +114,9 @@
           </div>
         </div>
 
-        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 probootstrap-animate" data-animate-effect="fadeIn">
+        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
           <div class="product-item">
-            <figure><img src="../static/img/img_5.jpg" alt="Free Template by uicookies.com" class="img-responsive"></figure>
+            <figure><img src="./static/img/img_5.jpg" alt="Alternativa a lo tradicional" class="img-responsive"></figure>
             <div class="text">
               <h2 class="heading">Alternativa a lo tradicional</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
@@ -139,11 +129,13 @@
   </section>   <!-- Fin cuerpo principal -->
 
   <!-- Separador del medio-->
-  <section class="probootstrap-section probootstrap-bg" style="background-image: url(../static/img/slider_5.jpg);">
+  <section class="probootstrap-section probootstrap-bg" style="background-image: url(./static/img/separator.jpg);">
     <div class="container text-center">
-      <h2 class="heading probootstrap-animate" data-animate-effect="fadeIn">Tu cuerpo es tu templo.</h2>
-      <p class="sub-heading probootstrap-animate" data-animate-effect="fadeIn">
-        Buscamos crear conciencia y reforzar la capacidad innata del cuerpo de mantener un buen estado de salud.
+      <h2 class="heading">Tu cuerpo es tu templo.</h2>
+      <p class="sub-heading">
+        Buscamos crear conciencia y reforzar la capacidad innata del cuerpo de mantener un buen estado de salud. <br>
+        El concepto de medicina natural no solo se basa en conseguir una cura a la enfermedad, <br> 
+        sino que es una idea más amplia, es todo un estilo de vida saludable que gira en torno a lo natural.
       </p>
     </div>
   </section>
@@ -153,55 +145,55 @@
     <div class="container">
       <!--Primera fila-->
       <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <div class="service">
             <div class="icon"><i class="icon-leaf"></i></div>
             <h2 class="heading">Fitoterapia</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, dolore!</p>
+            <p>La fitoterapia consiste en el tratamiento de enfermedades a través de las especies vegetales y sus derivados.</p>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <div class="service">
             <div class="icon"><i class="icon-hand"></i></div>
-            <h2 class="heading">No es efecto placebo</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, dolore!</p>
+            <h2 class="heading">Efecto placebo</h2>
+            <p>Los síntomas mejoran con una sustancia sin efectos directamente relacionados al tratamiento.</p>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <div class="service">
             <div class="icon"><i class="icon-tree"></i></div>
             <h2 class="heading">Natural siempre es mejor</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, dolore!</p>
+            <p>Aprovecha los productos y recursos que nos brinda la naturaleza, más para la prevención que para el tratamiento.</p>
           </div>
         </div>
       </div> <!-- Fin primera fila-->
 
-      <!--Segunda fila-->
+      <!--Segunda fila -->
       <div class="row">
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <div class="service">
             <div class="icon"><i class="icon-location"></i></div>
             <h2 class="heading">Dónde estamos</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, dolore!</p>
+            <p>Nuestro local se ubica en la Avenida Las Américas, CC Chilemex, Puerto Ordaz, edo. Bolívar, Venezuela.</p>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
           <div class="service">
             <div class="icon"><i class="icon-water"></i></div>
-            <h2 class="heading">Bioterapias</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, dolore!</p>
+            <h2 class="heading">Terapias naturales</h2>
+            <p>Terapias alternativas o complementarias a tratamientos convencionales, orientadas a mejorar la salud.</p>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <div class="service">
             <div class="icon"><i class="icon-air"></i></div>
-            <h2 class="heading">Recupera el equilibrio</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, dolore!</p>
+            <h2 class="heading">Nuestro objetivo</h2>
+            <p>Esta corriente médica busca que el cuerpo recupere su equilibro con alternativas naturales.</p>
           </div>
         </div>
 
@@ -210,35 +202,31 @@
   </section>
 
 <!-- CHAT -->
-<section class="probootstrap-section">
   <div class="container" id="chatdiv">
     <!--Primera fila-->
     <div class="row">
-      <div class="col-lg-12 col-md-4 col-sm-6 col-xs-12 probootstrap-animate" id="chatdiv">
-        <div class="service" id="chatdiv">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="chatdiv2">
+        <div class="service" id="chatdiv3">
           <div class="panel panel-primary">
-              <div class="panel-heading">
-                  <span class="glyphicon glyphicon-comment"></span> Chat
-                  
-              </div>
+              <div class="panel-heading"> Chatea con nosotros! </div>
               <div class="chatdiv">
                   <ul class="chat" id="chat">
-                      <li class="left clearfix">
+                      <br><li class="left clearfix">
                           <span class="chat-img pull-left"> 
-                            <img src="http://placehold.it/50/55C1E7/fff&text=BB" alt="User Avatar" class="img-circle" />
+                            <img src="./static/img/botbender.jpg" alt="User Avatar" class="img-circle" />
                           </span>
                           <div class="chat-body clearfix">
                               <div class="header">
                                   <strong class="primary-font">Bot Bender</strong> 
                               </div>
                               <p>
-                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                  Bienvenidos a L&L Company. Somos todo en medicinas naturales. ¿Cómo podemos ayudarte?
                               </p>
                           </div>
                       </li><br>
-                      <li class="left clearfix">
+                      <!-- <li class="left clearfix">
                           <span class="chat-img pull-left"> 
-                            <img src="http://placehold.it/50/FA6F57/fff&text=V" alt="User Avatar" class="img-circle" />
+                            <img src="./static/img/visitante.jpg" alt="User Avatar" class="img-circle" />
                           </span>
                           <div class="chat-body clearfix">
                               <div class="header">
@@ -248,13 +236,13 @@
                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
                               </p>
                           </div>
-                      </li><br>
+                      </li><br> -->
                       
                   </ul>
               </div>
               <div class="panel-footer">
                   <form class="input-group" id="message-box">
-                      <input id="chat-message" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                      <input id="chat-message" type="text" class="form-control input-sm" placeholder="Escribe tu mensaje aquí..." />
                       <span class="input-group-btn">
                           <input type="submit" value="Enviar" class="btn btn-warning btn-sm" id="btn-chat" onclick="press()">
                               
@@ -265,15 +253,14 @@
         </div>
       </div>
     </div>
-</div>
-</section>
-<!--  FIN CHAT-->
-<!-- End Body-->
-</body>
+  </div>
+  <!--  FIN CHAT-->
+  <!-- End Body-->
+  </body>
 
 
   <!-- FOOTER-->
-  <footer class="probootstrap-footer probootstrap-bg" style="background-image: url(../static/img/slider_3.jpg)">
+  <footer class="probootstrap-footer probootstrap-bg" style="background-image: url(./static/img/footer_index.jpg)">
     <div class="container">
 
       <!-- Info sobre los proveedores de productos-->
@@ -281,9 +268,7 @@
         <div class="col-md-3">
           <div class="probootstrap-footer-widget">
             <h4 class="heading">Nuestros Proveedores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-              Quae sapiente tempora quod. Eum autem cupiditate tempora 
-              illo voluptatibus dignissimos quos?</p>
+            <p>Los productos con los que elaboramos nuestras medicinas son manipulados por los profesionales en el área</p>
           </div> 
         </div>
 
@@ -292,38 +277,36 @@
           <div class="probootstrap-footer-widget">
             <h4 class="heading">Links de Interés</h4>
             <ul class="stack-link">
-              <li><a href="#">Lorem, ipsum.</a></li>
-              <li><a href="#">Lorem ipsum dolor sit.</a></li>
-              <li><a href="#">Lorem, ipsum dolor.</a></li>
-              <li><a href="#">Lorem ipsum dolor sit.</a></li>
+              <li><a href="https://www.quo.es/salud/g31732/medicina-natural-funciona/">¿Funciona la Medicina Natural?</a></li>
+              <li><a href="https://ecoosfera.com/2012/11/medicina-natural-plantas-y-frutos-que-deberias-tener-en-tu-botiquin-alternativo/">Siempre tener en casa</a></li>
+              <li><a href="https://mindfit.club/medicina-natural/">Medicina natural</a></li>
+              <li><a href="https://es.aleteia.org/2017/05/05/la-medicina-naturista-es-efectiva/">¿Es efectiva la medicina natural?</a></li>
             </ul>
           </div>
         </div>
 
-        <!--Nuestros productos-->
+        <!--Nuestros productos--> <!-- FALTA POR COMPLETAR-->
         <div class="col-md-3">
           <div class="probootstrap-footer-widget">
-            <h4 class="heading">Productos</h4>
+            <h4 class="heading">Servicios</h4>
             <ul class="stack-link">
-              <li>Organic Fruits</li>
-              <li>Organic Vegeables</li>
-              <li>Non-GMO Products</li>
-              <li>Locally Grown Products</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
             </ul>
           </div>
         </div>
 
-        <!--Suscripción, email-->
+        <!-- Íconos de Redes sociales-->
         <div class="col-md-3">
           <div class="probootstrap-footer-widget">
-            <h4 class="heading">Suscríbete</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eligendi..</p>
-            <form action="#">
-              <div class="form-field">
-                <input type="text" class="form-control" placeholder="Ingresa tu email">
-                <button class="btn btn-subscribe"><i class="icon-arrow-long-right"></i></button>
-              </div>
-            </form>
+            <h4 class="heading">Redes sociales</h4>
+            <ul class="probootstrap-footer-social">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
           </div>
         </div>
 
@@ -333,33 +316,21 @@
         <!--Propiedad, derechos de autor-->
         <div class="col-md-6">
           <div class="probootstrap-footer-widget">
-            <p>&copy; 2017 <a href="https://uicookies.com/">uiCookies:Green</a>. 
-               Designed by <a href="https://uicookies.com/">uicookies.com</a>. <br>
+            <p>Diseño de <a href="https://uicookies.com/">uiCookies:Green</a> &copy; 2017. <br>
               Propiedad de Jesús Ruíz y Génova Castillo
             </p>
           </div>
         </div>
-
-        <!-- Íconos de Redes sociales-->
-        <div class="col-md-6">
-          <div class="probootstrap-footer-widget right">
-            <ul class="probootstrap-footer-social">
-              <li><a href="#"><i class="icon-twitter"></i></a></li>
-              <li><a href="#"><i class="icon-facebook"></i></a></li>
-              <li><a href="#"><i class="icon-instagram2"></i></a></li>
-            </ul>
-          </div>
-        </div>
       </div>
+
     </div>
     <!--FIN FOOTER-->
   </footer>
 
   <!-- SCRIPTS-->
-  <script src="/static/js/scripts.js"></script>
-  <script src="/static/js/main.js"></script>
-  <script src="/static/js/mainchat.js"></script>
-  <script src="/static/js/custom.js"></script>
+  <script src="./static/js/scripts.js"></script>
+  <script src="./static/js/main.js"></script>
+  <script src="./static/js/custom.js"></script>
   
  
 </html>
