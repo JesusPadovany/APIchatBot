@@ -20,7 +20,7 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     price = models.IntegerField()
-    image = models.ImageField(upload_to='bender/static/img/products', default = 'none')
+    image = models.ImageField(upload_to='./static/img/products', default = 'none')
 
     def __str__(self):
         return "product: {} price: $ {}".format(self.name, self.price)
