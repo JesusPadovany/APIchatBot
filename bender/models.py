@@ -20,17 +20,10 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     price = models.IntegerField()
-    image = models.ImageField(upload_to='./static/img/products', default = 'none')
+    image = models.CharField(max_length=200)
 
     def __str__(self):
         return "product: {} price: $ {}".format(self.name, self.price)
 
-class ProductImage(models.Model):
-    description = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='static/img/products', default = 'false')
-    product = models.ForeignKey(Product, related_name="product_images",on_delete=models.CASCADE)
-    def __str__(self):
-        return "{}".format(self.description)
-    
 
 

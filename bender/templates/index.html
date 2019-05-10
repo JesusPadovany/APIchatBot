@@ -279,13 +279,12 @@
         {% for product in products %}
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <div class="product-item">
-              <a href="{{ product.image.url }}" class="image-popup">
-                <img src="{{ product.image.url }}" class="img-responsive img-rounded" alt="{{product.description}}">
+              <a href="{{ product.image }}" class="image-popup">
+                <img src="{{ product.image }}" class="my 4" alt="{{product.description}}" width="250" height="250">
               </a>
             <div class="text">
               <h2 class="heading">{{ product.name }}</h2>
               <p>{{ product.description }}</p>
-              <p>{{ product.image.url }}</p>
             </div>
           </div>
         </div>
