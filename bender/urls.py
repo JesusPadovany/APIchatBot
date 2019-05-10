@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from bender import views
 from django.urls import path
-from bender.views import About, Gallery, Member, products_list
+from bender.views import About, Gallery, Member
 
 urlpatterns = [
     url(r'^questions/$', views.question_list),
