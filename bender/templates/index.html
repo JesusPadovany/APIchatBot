@@ -15,290 +15,37 @@
   <!-- Imagen de cargando -->
   <div class="probootstrap-loader"></div>
 
-  <!-------------------------------------------------------------------- ENCABEZADO ------------------------------------->
-  
+  <!------------------------------ ENCABEZADO --------------------------------->
   {% include "header.html" %}
 
-  <!--------------------------------- Sección del Título principal con un slider de imágenes ------------------------------->
- {% include "principal_title.html" %}
-<!--------------------------------------------------Beneficios y conceptos iniciales---------------------------------------------------------> 
-  <section class="probootstrap-section">
-    <div class="container">
-      <div class="row">
-        <!--probootstrap-animate es una clase para que se carguen animadamente mientras vas viendo la pagina-->
-        <!--data-animate-effect="fadeIn" es tambien un efecto-->
-        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
-          <div class="product-item">
-            <figure><img src="./static/img/img_1.jpg" alt="Prevenir antes que curar" class="img-responsive"></figure>
-            <div class="text">
-              <h2 class="heading">Prevenir antes que curar</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
-            </div>
-          </div>
-        </div>
+  <!----------- Sección del Título principal con un slider de imágenes -------------->
+  {% include "principal_title.html" %}
 
-        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 " >
-          <div class="product-item">
-            <figure><img src="./static/img/img_3.jpg" alt="Imagen Origen organico" class="img-responsive"></figure>
-            <div class="text">
-              <h2 class="heading">Origen Orgánico</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
-            </div>
-          </div>
-        </div>
-      </div> <!-- Fin primera fila-->
-     
-      <!--Segunda fila-->
-      <div class="row">
+  <!------------------------------Beneficios y conceptos iniciales--------------------------> 
+  {% include "beneficios.html" %}
 
-        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
-          <div class="product-item">
-            <figure><img src="./static/img/img_4.jpg" alt="Atenúa la iatrogenia" class="img-responsive"></figure>
-            <div class="text">
-              <h2 class="heading">Atenúa la iatrogenia</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
-            </div>
-          </div>
-        </div>
+  <!--------------------- SECCIÓN DE INFORMACIÓN DE LA PÁGINA, CON HISTORIA Y TODO ------>
+  {% include "about.html" %}
+  
+  <!-------------------- SECCIÓN DE LOS INTEGRANTES DEL EQUIPO----------------------------->
+  {% include "team.html" %}
 
-        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
-          <div class="product-item">
-            <figure><img src="./static/img/img_5.jpg" alt="Alternativa a lo tradicional" class="img-responsive"></figure>
-            <div class="text">
-              <h2 class="heading">Alternativa a lo tradicional</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
-            </div>
-          </div>
-        </div>
+  <!----------------------- Separador del medio-------------------------------------------------->
+  {% include "separator.html" %}
 
-      </div> <!-- Fin fila-->
-    </div> <!-- Fin contenedor-->
-  </section>   <!-- Fin cuerpo principal -->
+  <!-------------------- Sección de Terapias naturales generales --------------------->
+  {% include "therapies.html" %}
 
-  <!------------------------------------ SECCIÓN DE INFORMACIÓN DE LA PÁGINA, CON HISTORIA Y TODO ----------------------------------->
-  <section class="probootstrap-section" id="about">
-    <div class="container">
-      <div class="probootstrap-section-heading text-center mb50">
-        <h4 class="sub-heading">About</h4>
-        <h2 class="heading">La historia de nuestra compañía</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <figure>
-            <img src="./static/img/img_5.jpg" alt="Free HTML5 Bootstrap Template by uicookies.com" class="img-responsive img-rounded">
-          </figure>
-        </div>
-        <div class="col-md-6">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae enim labore doloribus aut sunt praesentium vitae tempora asperiores. At quia ad corrupti in blanditiis iste velit, rem impedit quae, dolor doloremque. Nesciunt, nihil minima! Architecto excepturi dicta cum amet obcaecati?</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus id iste voluptate quam nostrum omnis.</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate magnam rem, incidunt exercitationem atque error repudiandae tenetur omnis fuga ex voluptate pariatur aliquam ea ab ipsa sed non natus eius?</p>
-        </div>
-        <div class="col-md-6">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam libero alias magni facere cumque inventore corrupti ad porro fuga eius!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque excepturi, qui illum culpa expedita non nobis dicta voluptates quod praesentium fugit quisquam inventore accusantium? Blanditiis.</p>
-        </div>
-      </div>
-    </div>
-  </section>  
+  <!----------------------------------------- CHAT --------------------------------->
+  {% include "chat.html" %}
 
-  <!------------------------------------------ SECCIÓN DE LOS INTEGRANTES DEL EQUIPO----------------------------------------------->
-  <section class="probootstrap-section">
-    <div class="container">
-      <div class="probootstrap-section-heading text-center mb50">
-        <h4 class="sub-heading">Equipo</h4>
-        <h2 class="heading">Fundadores y líderes del personal</h2>
-      </div>
-      <div class="row">
-
-        <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
-          <div class="media-item">
-            <figure><img src="./static/img/person_1.jpg" alt="Génova Castillo" class="img-responsive"></figure>
-            <div class="text">
-              <h4 class="sub-heading">Génova Castillo</h4>
-              <h2 class="heading">Fundadora</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
-          <div class="media-item">
-            <figure><img src="./static/img/person_2.jpg" alt="Jesús Ruíz" class="img-responsive"></figure>
-            <div class="text">
-              <h4 class="sub-heading">Jesus Ruíz</h4>
-              <h2 class="heading">Fundador</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    <!--FIN DE LOS INTEGRANTES DEL EQUIPO-->
-    </div>
-  </section>
-
-
-  <!------------------------------------------------- Separador del medio------------------------------------------------------------>
-  <section class="probootstrap-section probootstrap-bg" style="background-image: url(./static/img/separator.jpg);">
-    <div class="container text-center">
-      <h2 class="heading">Tu cuerpo es tu templo.</h2>
-      <p class="sub-heading">
-        Buscamos crear conciencia y reforzar la capacidad innata del cuerpo de mantener un buen estado de salud. <br>
-        El concepto de medicina natural no solo se basa en conseguir una cura a la enfermedad, <br> 
-        sino que es una idea más amplia, es todo un estilo de vida saludable que gira en torno a lo natural.
-      </p>
-    </div>
-  </section>
-
-  <!---------------------------------------- Sección de conceptos generales ------------------------------------------>
-  <section class="probootstrap-section">
-    <div class="container">
-      <!--Primera fila-->
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="service">
-            <div class="icon"><i class="icon-leaf"></i></div>
-            <h2 class="heading">Fitoterapia</h2>
-            <p>La fitoterapia consiste en el tratamiento de enfermedades a través de las especies vegetales y sus derivados.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="service">
-            <div class="icon"><i class="icon-hand"></i></div>
-            <h2 class="heading">Efecto placebo</h2>
-            <p>Los síntomas mejoran con una sustancia sin efectos directamente relacionados al tratamiento.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="service">
-            <div class="icon"><i class="icon-tree"></i></div>
-            <h2 class="heading">Naturales mejor</h2>
-            <p>Aprovecha los productos y recursos que nos brinda la naturaleza, más para la prevención que para el tratamiento.</p>
-          </div>
-        </div>
-      </div> <!-- Fin primera fila-->
-
-      <!--Segunda fila -->
-      <div class="row">
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="service">
-            <div class="icon"><i class="icon-location"></i></div>
-            <h2 class="heading">Dónde estamos</h2>
-            <p>Nuestro local se ubica en la Avenida Las Américas, CC Chilemex, Puerto Ordaz, edo. Bolívar, Venezuela.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
-          <div class="service">
-            <div class="icon"><i class="icon-water"></i></div>
-            <h2 class="heading">Terapias naturales</h2>
-            <p>Terapias alternativas o complementarias a tratamientos convencionales, orientadas a mejorar la salud.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="service">
-            <div class="icon"><i class="icon-air"></i></div>
-            <h2 class="heading">Nuestro objetivo</h2>
-            <p>Esta corriente médica busca que el cuerpo recupere su equilibro con alternativas naturales.</p>
-          </div>
-        </div>
-
-      </div> <!-- Fin de fila-->
-    </div> <!-- Fin de contenedor -->
-  </section>
-
-<!-------------------------------------------------- CHAT ----------------------------------------------------->
-  <div class="container" id="chatdiv">
-    <!--Primera fila-->
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="chatdiv2">
-        <div class="service" id="chatdiv3">
-          <div class="panel panel-success">
-              <div class="panel-heading"> Chatea con nosotros! </div>
-              <div class="chatdiv">
-                  <ul class="chat" id="chat">
-                      <br><li class="left clearfix">
-                          <span class="chat-img pull-left"> 
-                            <img src="./static/img/botbender.jpg" alt="User Avatar" class="img-circle" />
-                          </span>
-                          <div class="chat-body clearfix">
-                              <div class="header">
-                                  <strong class="primary-font">Bot Bender</strong> 
-                              </div>
-                              <p>
-                                  Bienvenidos a L&L Company. Somos todo en medicinas naturales. ¿Cómo podemos ayudarte?
-                              </p>
-                          </div>
-                      </li><br>
-                      <!-- <li class="left clearfix">
-                          <span class="chat-img pull-left"> 
-                            <img src="./static/img/visitante.jpg" alt="User Avatar" class="img-circle" />
-                          </span>
-                          <div class="chat-body clearfix">
-                              <div class="header">
-                                  <strong class="primary-font">Visitante</strong> 
-                              </div>
-                              <p>
-                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                              </p>
-                          </div>
-                      </li><br> -->
-                      
-                  </ul>
-              </div>
-              <div class="panel-footer">
-                  <form class="input-group" id="message-box">
-                      <input id="chat-message" type="text" class="form-control input-sm" placeholder="Escribe tu mensaje aquí..." />
-                      <span class="input-group-btn">
-                          <input type="submit" value="Enviar" class="btn btn-success btn-sm" id="btn-chat" onclick="press()">
-                              
-                      </span>
-                    </form>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--  FIN CHAT-->
-
-  <!-------------------------------------IMÁGENES DE NUESTROS PRODUCTOS--------------------------------------S-->
-  <section class="probootstrap-section" id="products">
-    <div class="container">
-      <div class="probootstrap-section-heading text-center mb50">
-        <h4 class="sub-heading">Imágenes de nuestros productos</h4>
-        <h2 class="heading">Mira y explora!</h2>
-      </div>
-      <div class="row">
-        <!-- INICIO DE LA FILA-->
-
-        {% for product in products %}
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-          <div class="product-item">
-              <a href="{{ product.image }}" class="image-popup">
-                <img src="{{ product.image }}" class="my 4" alt="{{product.description}}" width="250" height="250">
-              </a>
-            <div class="text">
-              <h2 class="heading">{{ product.name }}</h2>
-              <p>{{ product.description }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-        
-        
-  <!-- FIN DE LA SECCIÓN DE LA GALERÍA-->
-      </div>
-    </div>
-  </section>  
-
+  <!---------------------------Galería de productos-------------------------->
+  {% include "gallery.html" %}
+ 
   <!-- End Body-->
   </body>
-  <!------------------------------------------------------------------ FOOTER--------------------------------------------------------------->
+
+  <!------------------------------------------- FOOTER----------------------------------->
   {% include "footer.html" %}
 
   <!-- SCRIPTS-->
