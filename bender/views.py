@@ -23,16 +23,6 @@ class Indice(TemplateView):
                     'benefits' : benefits
                   }
         return context
-    
-
-class About(TemplateView):
-    template_name = 'about.html'
-
-class Gallery(TemplateView):
-    template_name = 'gallery.html'
-
-class Member(TemplateView):
-    template_name = 'team.html'
 
 class JSONResponse(HttpResponse):
     """

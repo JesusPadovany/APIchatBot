@@ -26,10 +26,9 @@ class Member(models.Model):
     description = models.CharField(max_length=200)
     rol = models.CharField(max_length=200)
     image = models.CharField(max_length=200)
-    objects = models.Manager()
 
     def __str__(self):
-        return "member: {} rol: ! {}".format(self.name, self.rol)
+        return self.name
 
 class Benefit(models.Model):
     title = models.CharField(max_length=200)
