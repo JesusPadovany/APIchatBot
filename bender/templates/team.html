@@ -1,5 +1,5 @@
   <!-------------------------- SECCIÓN DE LOS INTEGRANTES DEL EQUIPO------------------------------------>
-  <section class="probootstrap-section">
+  <section class="probootstrap-section" id="team">
     <div class="container">
       <div class="probootstrap-section-heading text-center mb50">
         <h4 class="sub-heading">Equipo</h4>
@@ -7,27 +7,18 @@
       </div>
       <div class="row">
 
+        {% for member in members %}
         <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
           <div class="media-item">
-            <figure><img src="./static/img/person_1.jpg" alt="Génova Castillo" class="img-responsive"></figure>
+            <figure><img src="{{ member.image }}" alt="{{ member.name }}" class="img-responsive"></figure>
             <div class="text">
-              <h4 class="sub-heading">Génova Castillo</h4>
-              <h2 class="heading">Fundadora</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h4 class="sub-heading">{{ member.name }}</h4>
+              <h2 class="heading">{{ member.rol }}</h2>
+              <p>{{ member.description }}</p>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
-          <div class="media-item">
-            <figure><img src="./static/img/person_2.jpg" alt="Jesús Ruíz" class="img-responsive"></figure>
-            <div class="text">
-              <h4 class="sub-heading">Jesus Ruíz</h4>
-              <h2 class="heading">Fundador</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
 
       </div>
     <!--FIN DE LOS INTEGRANTES DEL EQUIPO-->

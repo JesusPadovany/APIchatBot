@@ -36,15 +36,6 @@ function requestToChatbot(texto){
     if (this.readyState == 4 && this.status == 200) {
       var response = this.responseText;
       var objetoResponse = JSON.parse(response); 
-      
-      /* 
-      for (var id in response){
-      // Controlando que json realmente tenga esa propiedad
-      if (response.hasOwnProperty(id)) {
-        // Mostrando en pantalla la clave junto a su valor
-        alert("La clave es " + id+ " y el valor es " + response[id]);
-      }
-      */
       responseBot(objetoResponse.answer_text);       
     }
 };

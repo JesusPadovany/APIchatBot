@@ -4,49 +4,18 @@
       <div class="row">
         <!--probootstrap-animate es una clase para que se carguen animadamente mientras vas viendo la pagina-->
         <!--data-animate-effect="fadeIn" es tambien un efecto-->
+        
+        {% for benefit in benefits %}
         <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
           <div class="product-item">
-            <figure><img src="./static/img/img_1.jpg" alt="Prevenir antes que curar" class="img-responsive"></figure>
+            <figure><img src="{{benefit.image}}" alt="{{benefit.title}}" class="img-responsive"></figure>
             <div class="text">
-              <h2 class="heading">Prevenir antes que curar</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
+              <h2 class="heading">{{benefit.title}}</h2>
+              <p>{{benefit.description}}</p>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 " >
-          <div class="product-item">
-            <figure><img src="./static/img/img_3.jpg" alt="Imagen Origen organico" class="img-responsive"></figure>
-            <div class="text">
-              <h2 class="heading">Origen Orgánico</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
-            </div>
-          </div>
-        </div>
-      </div> <!-- Fin primera fila-->
-     
-      <!--Segunda fila-->
-      <div class="row">
-
-        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
-          <div class="product-item">
-            <figure><img src="./static/img/img_4.jpg" alt="Atenúa la iatrogenia" class="img-responsive"></figure>
-            <div class="text">
-              <h2 class="heading">Atenúa la iatrogenia</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
-          <div class="product-item">
-            <figure><img src="./static/img/img_5.jpg" alt="Alternativa a lo tradicional" class="img-responsive"></figure>
-            <div class="text">
-              <h2 class="heading">Alternativa a lo tradicional</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim ipsum dolorem voluptas asperiores obcaecati quasi!</p>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
 
       </div> <!-- Fin fila-->
     </div> <!-- Fin contenedor-->

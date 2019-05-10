@@ -12,10 +12,6 @@ class Answer(models.Model):
     def __str__(self):
         return self.answer_text
 
-class Reflection(models.Model):
-    first_person = models.CharField(max_length=200)
-    third_person = models.CharField(max_length=200)
-
 class Product(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
@@ -24,6 +20,24 @@ class Product(models.Model):
 
     def __str__(self):
         return "product: {} price: $ {}".format(self.name, self.price)
+
+class Member(models.Model):
+    name = models.CharField(max_length=200)
+    description = models.CharField(max_length=200)
+    rol = models.CharField(max_length=200)
+    image = models.CharField(max_length=200)
+    objects = models.Manager()
+
+    def __str__(self):
+        return "member: {} rol: ! {}".format(self.name, self.rol)
+
+class Benefit(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length=200)
+    image = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
 
 
 

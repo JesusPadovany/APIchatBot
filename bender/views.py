@@ -2,7 +2,9 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from bender.models import Question, Answer, Product
+from bender.models import Question, Answer, Product, Member
+from bender.models import Member as MemberModel
+from bender.models import Benefit as BenefitModel
 from bender.serializers import QuestionSerializer,AnswerSerializer
 import random
 from django.shortcuts import render
@@ -14,7 +16,12 @@ class Indice(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
         products = Product.objects.all()
-        context = {'products' : products}
+        members = MemberModel.objects.all()
+        benefits = BenefitModel.objects.all()
+        context = { 'products' : products,
+                    'members' : members,
+                    'benefits' : benefits
+                  }
         return context
     
 
@@ -23,6 +30,9 @@ class About(TemplateView):
 
 class Gallery(TemplateView):
     template_name = 'gallery.html'
+
+class Member(TemplateView):
+    template_name = 'team.html'
 
 class JSONResponse(HttpResponse):
     """
@@ -95,7 +105,6 @@ def question_detail(request, pk):
         question.delete()
         return HttpResponse(status=204)
 
-
 @csrf_exempt
 def answer_detail(request, pk):
     """
@@ -138,7 +147,3 @@ def bot(request, str):
             return JSONResponse(serializer.data, status=201)
         return JSONResponse(serializer.errors, status=400)
 
-def products_list(request):
-    products = Product.objects.all()
-    context = {'products' : products}
-    return render(request, 'gallery.html', context)
