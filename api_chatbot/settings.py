@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'corsheaders', #Para agregar CORS a los headers response
     'rest_framework',
     'bender',
-    'products',
 ]
 
 MIDDLEWARE = [

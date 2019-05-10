@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>L&L Medicines | Home</title>
+ 
+    <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/styles-merged.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <!--<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>-->
+  </head>
+
+  <body>
+
+  <!-- Imagen de cargando -->
+  <div class="probootstrap-loader"></div>
+
+  <!-- START: header -->
+  <header role="banner" class="probootstrap-header">
+    <div class="container">
+      <!-- Título arriba a la izquierda-->
+        <a href="index.html" class="probootstrap-logo">L&L Company.</a>
+        
+        <!-- Este menu se muestra cuando la pantalla es muy pequeña-->
+        <a href="#" class="probootstrap-burger-menu visible-xs" >
+          <i>Menu</i>
+        </a>
+        <div class="mobile-menu-overlay"></div>
+
+        <!-- Menú superior que lleva a las otras páginas-->
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+          <ul class="probootstrap-main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Sobre nosotros</a></li>
+            <li><a href="gallery.html">Galería</a></li>
+            <li class="active"><a href="contact.html">Contacto</a></li>
+          </ul> 
+        </nav>
+    </div>
+  <!-- END: header -->
+  </header>
+
+  <!-- Sección del Título principal con un slider de imágenes -->
+  <section class="probootstrap-slider flexslider">
+    <div class="probootstrap-text-intro">
+      <div class="container">
+        <div class="row"> <!--Fila-->
+          <div class="col-md-10 col-md-offset-1">
+            <div class="probootstrap-slider-text text-center">
+              <!--Título principal-->
+              <h1 class="probootstrap-heading probootstrap-animate mb20" data-animate-effect="fadeIn">CONTACTO</h1>
+              <!-- Eslogan del título-->
+              <div class="probootstrap-animate probootstrap-sub-wrap mb30" data-animate-effect="fadeIn">
+                Ofreciendo una alternativa con naturopatía. <br>
+              </div>
+            </div>
+          </div>
+        </div> <!-- Fin fila-->
+      </div> <!-- Fin contenedor-->
+    </div>
+
+    <!-- Fondos del slider del título principal-->
+     <ul class="slides">
+      <li style="background-image: url(./static/img/slider_1.jpg);"></li>
+      <li style="background-image: url(./static/img/slider_2.jpg);"></li>
+      <li style="background-image: url(./static/img/slider_4.jpg);"></li>
+    </ul> 
+  <!-- Fin de Sección del Título principal -->
+  </section>
+
+  <!--FORMULARIO DE ENVÍO DE CORREO-->
+  <section class="probootstrap-section">
+    <div class="container">
+
+      <div class="probootstrap-section-heading text-center mb50">
+        <h4 class="sub-heading">Contáctanos</h4>
+        <h2 class="heading">Envíanos tu pedido</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8"> <!-- method="post" , esto va en el form de la linea de abajo-->
+          <form action="#" class="probootstrap-form mb60">
+            
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="fname">Nombres</label>
+                  <input type="text" class="form-control" id="fname" name="fname">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="lname">Apellidos</label>
+                  <input type="text" class="form-control" id="lname" name="lname">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
+            </div>
+
+            <div class="form-group">
+              <input class="btn btn-primary" id="submit" name="submit" value="Enviar mensaje">
+            </div>
+
+          </form>
+        </div>
+
+        <div class="col-md-3 col-md-push-1">
+          <h4>Información de contacto</h4>
+          <ul class="with-icon colored">
+            <li><i class="icon-location2"></i> <span>CC Chilemex, Avenida las Américas. Puerto Ordaz, Venezuela.</span></li>
+            <li><i class="icon-mail"></i><span>lylcompany@yopmail.com</span></li>
+            <li><i class="icon-phone2"></i><span>+58 424 1124569</span></li>
+          </ul>
+
+          <h4>L&L Company</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi corporis quos earum delectus minus rerum!</p>
+        </div>
+
+      </div>
+    </div>
+  </section>  
+  <!--FIN DEL FORMULARIO-->
+
+
+    {%include "footer.html" %}
+  
+    <!-- SCRIPTS-->
+    <script src="./static/js/scripts.js"></script>
+    <script src="./static/js/main.js"></script>
+    <script src="./static/js/custom.js"></script>
+    
+
+  </body>
+</html>

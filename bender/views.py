@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from bender.models import Question, Answer
+from bender.models import Question, Answer, Product
 from bender.serializers import QuestionSerializer,AnswerSerializer
 import random
 from django.shortcuts import render
@@ -11,6 +11,18 @@ from django.views.generic import DetailView, ListView, RedirectView, UpdateView,
 
 class Indice(TemplateView):
     template_name = 'index.html'
+
+    def get_context_data(self, *args, **kwargs):
+        products = Product.objects.all()
+        context = {'products' : products}
+        return context
+    
+
+class About(TemplateView):
+    template_name = 'about.html'
+
+class Gallery(TemplateView):
+    template_name = 'gallery.html'
 
 class JSONResponse(HttpResponse):
     """
@@ -125,3 +137,8 @@ def bot(request, str):
             serializer.save()
             return JSONResponse(serializer.data, status=201)
         return JSONResponse(serializer.errors, status=400)
+
+def products_list(request):
+    products = Product.objects.all()
+    context = {'products' : products}
+    return render(request, 'gallery.html', context)
