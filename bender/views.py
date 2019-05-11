@@ -124,8 +124,12 @@ def answer_detail(request, pk):
 @csrf_exempt
 def bot(request, str):
     if request.method == 'GET':
-        questions = Question.objects.filter(question_text__contains=str).values('id')
-        answer = random.choice(Answer.objects.filter(question__id__in=questions))
+        sch = search(str)
+        if sch == "No encontrada":
+            question = Question.objects.filter(question_text='Desconocida').values('id')
+        else:
+            question = Question.objects.filter(question_text__startswith=sch).values('id')
+        answer = random.choice(Answer.objects.filter(question__id__in=question))
         serializer = AnswerSerializer(answer)
         return JSONResponse(serializer.data)
 
@@ -136,4 +140,22 @@ def bot(request, str):
             serializer.save()
             return JSONResponse(serializer.data, status=201)
         return JSONResponse(serializer.errors, status=400)
+
+def search_keywords(str):
+	keywords = ["donde", "como", "cuando", "me duele", "que", "remedios para", "hola", "buenas", "adios",
+                "gracias"]
+	x = str.lower()
+	pos = -1
+	for kw in keywords:
+		pos = x.find(kw)
+		if pos >= 0: break
+	return pos
+
+def search(str):
+    pos = search_keywords(str)
+    if pos >= 0:
+        return str[pos:len(str)]
+    else:
+        return "No encontrada"
+
 
