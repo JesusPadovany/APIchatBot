@@ -13,6 +13,20 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Daniel Eden
 */
 
+.img-rounder {
+  border-radius: 6px;
+}
+
+.img-rounded {
+  border-radius: 6px;
+  max-height: 250px;
+  max-width: 300px;
+  height: 200px;
+  width: 300px;
+  display: block;
+  margin: auto;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

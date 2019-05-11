@@ -917,8 +917,14 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   margin-bottom: 0;
 }
 
-.product-item .text, .media-item .text {
+.media-item .text {
   padding: 20px;
+}
+
+.product-item .text {
+  padding: 20px;
+  height: 350px;
+  max-height: 350px;
 }
 
 .product-item .text .heading, .media-item .text .heading {
