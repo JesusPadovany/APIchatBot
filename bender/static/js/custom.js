@@ -1,33 +1,38 @@
+function onMetaAndEnter(event) {
+    if ((event.metaKey || event.ctrlKey) && event.keyCode == 13) {
+        press();
+    }
+}
+
 function press(){
-  var message = $('#chat-message');
-  var li_ini = "<li class=\"left clearfix\">";
-  var span_ini = "<span class=\"chat-img pull-left\">";
-  var img = "<img src=\"./static/img/visitante.jpg\" alt=\"User Avatar\" class=\"img-circle\" />";
-  //Cierra span
-  var div1 = "<div class=\"chat-body clearfix\">";
-  var div2 = "<div class=\"header\">";
-  var strong = "<strong class=\"primary-font\">Visitante</strong>";
-  //cierra div
+    var userInput = $('.text-box');
+    var newMessage = userInput.html().replace(/\<div\>|\<br.*?\>/ig, '\n').replace(/\<\/div\>/g, '').trim().replace(/\n/g, '<br>');
 
-  $('#message-box').submit(function (e) {
-      e.preventDefault();
-      if(!message.val() == ""){
-         
-          var mensaje = li_ini + span_ini + img + "</span>" + div1 +div2 +
-          strong + "</div>" +"<p>" + message.val() +"</p>" + "</div> </li> <br>"
+    if (!newMessage) return;
 
-          $("#chat").append(mensaje);
-          requestToChatbot(message.val());
-          message.val('');
-      }
-  });
+    var messagesContainer = $('.messages');
+
+    messagesContainer.append([
+        '<li class="self">',
+        newMessage,
+        '</li>'
+    ].join(''));
+
+    //Limpiar la entrada del usuario
+    userInput.html('');
+    //Enfocar el chat en el nuevo mensaje
+    userInput.focus();
+
+    messagesContainer.finish().animate({
+        scrollTop: messagesContainer.prop("scrollHeight")
+    }, 250);
+    requestToChatbot(newMessage);
 }
 
 
 function requestToChatbot(texto){
   var request = new XMLHttpRequest();
-  //var url = '/api/'+texto; //Esta es para cuando se debe ejecutar en teléfonos o tablets
-  var url = 'http://127.0.0.1:8000/api/'+texto; //Esta es para ejecutar en la pc de servidor
+  var url = '/api/'+texto;
 
   request.open('GET', url, true);
   request.setRequestHeader("Content-Type", "application/json");
@@ -49,25 +54,6 @@ function requestToChatbot(texto){
 }
 
 
-function responseBot(msg){
-
-  var li_ini = "<li class=\"left clearfix\">";
-  var span_ini = "<span class=\"chat-img pull-left\">";
-  var img = "<img src=\"./static/img/botbender.jpg\" alt=\"User Avatar\" class=\"img-circle\" />";
-  //Cierra span
-  var div1 = "<div class=\"chat-body clearfix\">";
-  var div2 = "<div class=\"header\">";
-  var strong = "<strong class=\"primary-font\">Bot Bender</strong>";
-  //cierra div
-       
-  var bot_respuesta = li_ini + span_ini + img + "</span>" + div1 +div2 +
-  strong + "</div>" +"<p>" + msg +"</p>" + "</div> </li>  <br>"
-
-  $("#chat").append(bot_respuesta);
-
-
-};
-
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -76,7 +62,6 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 
-//SDFSDF
 
 var element = $('.floating-chat');
 var myStorage = localStorage;
@@ -101,7 +86,7 @@ function openElement() {
     textInput.keydown(onMetaAndEnter).prop("disabled", false).focus();
     element.off('click', openElement);
     element.find('.header button').click(closeElement);
-    element.find('#sendMessage').click(sendNewMessage);
+    element.find('#sendMessage').click(press);
     messages.scrollTop(messages.prop("scrollHeight"));
 }
 
@@ -110,7 +95,7 @@ function closeElement() {
     element.find('>i').show();
     element.removeClass('expand');
     element.find('.header button').off('click', closeElement);
-    element.find('#sendMessage').off('click', sendNewMessage);
+    element.find('#sendMessage').off('click', press);
     element.find('.text-box').off('keydown', onMetaAndEnter).prop("disabled", true).blur();
     setTimeout(function() {
         element.find('.chat').removeClass('enter').show()
@@ -118,6 +103,7 @@ function closeElement() {
     }, 500);
 }
 
+//Crear interfaz del bot
 function createUUID() {
     // http://www.ietf.org/rfc/rfc4122.txt
     var s = [];
@@ -131,61 +117,5 @@ function createUUID() {
 
     var uuid = s.join("");
     return uuid;
-}
-
-function sendNewMessage() {
-    var userInput = $('.text-box');
-    var newMessage = userInput.html().replace(/\<div\>|\<br.*?\>/ig, '\n').replace(/\<\/div\>/g, '').trim().replace(/\n/g, '<br>');
-    
-    if (!newMessage) return;
-
-    var messagesContainer = $('.messages');
-
-    messagesContainer.append([
-        '<li class="self">',
-        newMessage,
-        '</li>'
-    ].join(''));
-
-    // clean out old message
-    userInput.html('');
-    // focus on input
-    userInput.focus();
-
-    messagesContainer.finish().animate({
-        scrollTop: messagesContainer.prop("scrollHeight")
-    }, 250);
-    requestToChatbot(newMessage);
-}
-
-function sendNewMessageBot(msg) {
-  var newMessage = requestToChatbot(msg);
-
-  console.log("newMssage:")
-  console.log(newMessage);
-  if (!newMessage) return;
-
-  var messagesContainer = $('.messages');
-
-  messagesContainer.append([
-      '<li class="other">',
-      newMessage,
-      '</li>'
-  ].join(''));
-
-  // clean out old message
-  userInput.html('');
-  // focus on input
-  userInput.focus();
-
-  messagesContainer.finish().animate({
-      scrollTop: messagesContainer.prop("scrollHeight")
-  }, 250);
-}
-
-function onMetaAndEnter(event) {
-    if ((event.metaKey || event.ctrlKey) && event.keyCode == 13) {
-        sendNewMessage();
-    }
 }
 
