@@ -64,6 +64,7 @@ function closeForm() {
 
 
 var element = $('.floating-chat');
+var element2 = $('.probootstrap-animate');
 var myStorage = localStorage;
 
 if (!myStorage.getItem('chatID')) {
@@ -75,6 +76,7 @@ setTimeout(function() {
 }, 1000);
 
 element.click(openElement);
+element2.click(openElement);
 
 function openElement() {
     var messages = element.find('.messages');
