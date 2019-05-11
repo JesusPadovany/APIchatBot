@@ -133,17 +133,9 @@ def bot(request, str):
         serializer = AnswerSerializer(answer)
         return JSONResponse(serializer.data)
 
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = QuestionSerializer(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JSONResponse(serializer.data, status=201)
-        return JSONResponse(serializer.errors, status=400)
-
 def search_keywords(str):
 	keywords = ["donde", "como", "cuando", "me duele", "que", "remedios para", "hola", "buenas", "adios",
-                "gracias"]
+                "gracias", "medios"]
 	x = str.lower()
 	pos = -1
 	for kw in keywords:
