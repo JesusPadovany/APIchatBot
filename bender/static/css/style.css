@@ -923,8 +923,8 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 
 .product-item .text {
   padding: 20px;
-  height: 350px;
-  max-height: 350px;
+  height: 485px;
+  max-height: 500px;
 }
 
 .product-item .text .heading, .media-item .text .heading {
