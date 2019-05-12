@@ -3,6 +3,10 @@
 	 box-sizing: border-box;
 }
  
+.chat-pop-up{
+	
+}
+
  .floating-chat {
 	 cursor: pointer;
 	 display: flex;
